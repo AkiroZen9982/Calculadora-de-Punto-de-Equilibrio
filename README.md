@@ -1,5 +1,4 @@
-# Calculadora de Punto de Equilibrio Intuitiva y Visual
-
+# Calculadora De Punto De Equilibrio
 ## Descripción
 
 Esta aplicación es una herramienta intuitiva y visual diseñada para calcular el punto de equilibrio de manera sencilla y efectiva. Permite a los usuarios ingresar datos clave y obtener resultados claros, facilitando la comprensión de conceptos financieros.
@@ -12,10 +11,10 @@ Esta aplicación es una herramienta intuitiva y visual diseñada para calcular e
 - **Formulario Intuitivo:** 
   - Entrada de datos sencilla para **ingresos por unidad**, **costos variables por unidad** y **costos fijos totales**.
 
-- **Validación de Datos:** 
+- **Validación De Datos:** 
   - Asegura que todos los datos ingresados sean numéricos y positivos, minimizando errores.
 
-- **Cálculo en Tiempo Real:** 
+- **Cálculo En Tiempo Real:** 
   - Los resultados del punto de equilibrio se actualizan en tiempo real en unidades y valor monetario.
 
 - **Visualización Gráfica:** 
