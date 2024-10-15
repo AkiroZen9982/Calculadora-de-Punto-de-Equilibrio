@@ -26,3 +26,8 @@ Esta aplicación es una herramienta intuitiva y visual diseñada para calcular e
 
 > [!IMPORTANT]
 > Se recomienda ingresar datos precisos para obtener resultados fiables. Esta herramienta es un apoyo, pero no reemplaza el asesoramiento financiero profesional.
+
+## Capturas
+![Captura de pantalla 2024-10-15 160729](https://github.com/user-attachments/assets/738773fb-3f66-4bed-9118-e41f452c63ac)
+
+![Imagen de WhatsApp 2024-10-15 a las 16 14 24_0491696d](https://github.com/user-attachments/assets/57234e47-631f-4870-9cbe-263ae9d901a1)
