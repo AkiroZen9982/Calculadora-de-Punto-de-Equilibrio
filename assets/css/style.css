@@ -17,12 +17,12 @@ body {
   padding-left: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  background-color: #374151; /* Oscuro */
+  background-color: #374151;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .input-group input:focus {
-  background-color: #1f2937; /* Más oscuro */
-  border-color: #2563eb; /* Azul */
+  background-color: #1f2937;
+  border-color: #2563eb;
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
 }
@@ -30,8 +30,8 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #374151; /* Oscuro */
-  color: #d1d5db; /* Gris claro */
+  background-color: #374151;
+  color: #d1d5db;
   padding: 0 0.25rem;
   font-size: 1rem;
   pointer-events: none;
@@ -41,7 +41,7 @@ body {
 .input-group input:not(:placeholder-shown) + label {
   top: -0.75rem;
   left: 0.75rem;
-  background-color: #1f2937; /* Más oscuro */
-  color: #2563eb; /* Azul */
+  background-color: #1f2937;
+  color: #2563eb; 
   font-size: 0.875rem;
 }

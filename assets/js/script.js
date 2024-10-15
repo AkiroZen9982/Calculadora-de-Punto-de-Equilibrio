@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
   const ingresosInput = document.getElementById("ingresos");
   const costosVariablesInput = document.getElementById("costosVariables");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const costosVariables = parseFloat(costosVariablesInput.value);
     const costosFijos = parseFloat(costosFijosInput.value);
 
-    //Validación de que los valores ingresados sean numéricos y positivos.
     if (
       isNaN(ingresos) ||
       isNaN(costosVariables) ||

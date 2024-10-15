@@ -1,15 +1,22 @@
-**Creando una Calculadora de Punto de Equilibrio Intuitiva y Visual**
+# Calculadora de Punto de Equilibrio Intuitiva y Visual
 
-Objetivo: Transformar una simple calculadora de punto de equilibrio en una herramienta visual y amigable que guíe al usuario paso a paso en el cálculo y le presente los resultados de forma clara y concisa.
+## Descripción
 
-Funcionalidades a implementar:
+Esta aplicación es una herramienta intuitiva y visual diseñada para calcular el punto de equilibrio de manera sencilla y efectiva. Permite a los usuarios ingresar datos clave y obtener resultados claros, facilitando la comprensión de conceptos financieros.
 
-**Formulario intuitivo:** Diseñar un formulario que solicite los datos necesarios al usuario (ingresos por unidad, costos variables por unidad, costos fijos totales) de manera clara y concisa.
+## Características
 
-**Validación de datos:** Implementar una validación para asegurar que los datos ingresados sean numéricos y positivos.
+- **Formulario Intuitivo:** 
+  - Entrada de datos sencilla para **ingresos por unidad**, **costos variables por unidad** y **costos fijos totales**.
+  
+- **Validación de Datos:** 
+  - Asegura que todos los datos ingresados sean numéricos y positivos, minimizando errores.
 
-**Cálculo:** Mostrar el resultado del cálculo del punto de equilibrio (en unidades y en valor monetario) De prefernencia si es en tiempo real a medida que el usuario ingresa los datos.
+- **Cálculo en Tiempo Real:** 
+  - Los resultados del punto de equilibrio se actualizan en tiempo real en unidades y valor monetario.
 
-**Gráfico visual:** Representar gráficamente el punto de equilibrio, utilizando una librería como Chart.js o D3.js. Esto ayudará al usuario a visualizar de forma más clara el concepto.
+- **Visualización Gráfica:** 
+  - Representación gráfica del punto de equilibrio utilizando **Chart.js**, que facilita la interpretación de los resultados.
 
-**Diseño responsivo:** Asegurar que la aplicación se adapte correctamente a diferentes tamaños de pantalla.
+- **Diseño Responsivo:** 
+  - Adaptabilidad en diferentes tamaños de pantalla para una experiencia óptima en dispositivos móviles y de escritorio.
