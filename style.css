@@ -1,6 +1,49 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
     text-align: center;
 }
 
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #374151; /* Oscuro */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.input-group input:focus {
+    background-color: #1f2937; /* Más oscuro */
+    border-color: #2563eb; /* Azul */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+.input-group label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #374151; /* Oscuro */
+    color: #d1d5db; /* Gris claro */
+    padding: 0 0.25rem;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -0.75rem;
+    left: 0.75rem;
+    background-color: #1f2937; /* Más oscuro */
+    color: #2563eb; /* Azul */
+    font-size: 0.875rem;
+}
