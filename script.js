@@ -1,28 +1,59 @@
 // script.js
-function calcular() {
-    // Obtener los valores de los campos del formulario
-    const ingreso = parseFloat(document.getElementById('ingreso').value);
-    // ... otros valores
-
-    // Validar los datos
-    if (isNaN(ingreso) || ingreso <= 0) {
-        alert('Por favor, ingrese un valor numérico positivo para el ingreso por unidad.');
-        return;
-    }
-    // ... otras validaciones
-
-    // Calcular el punto de equilibrio
-    const costoVariable = ...;
-    const costoFijo = ...;
-    const puntoEquilibrioUnidades = costoFijo / (ingreso - costoVariable);
-    const puntoEquilibrioValor = puntoEquilibrioUnidades * ingreso;
-
-    // Mostrar el resultado
-    document.getElementById('resultado').textContent = `El punto de equilibrio es de ${puntoEquilibrioUnidades.toFixed(2)} unidades o $${puntoEquilibrioValor.toFixed(2)}`;
-
-    // Crear el gráfico
+document.addEventListener('DOMContentLoaded', function() {
+    const ingresosInput = document.getElementById('ingresos');
+    const costosVariablesInput = document.getElementById('costosVariables');
+    const costosFijosInput = document.getElementById('costosFijos');
+    const resultadoDiv = document.getElementById('resultado');
     const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        // Configuración del gráfico
-    });
-}
+
+    let chart;
+
+    function actualizarResultado() {
+        const ingresos = parseFloat(ingresosInput.value);
+        const costosVariables = parseFloat(costosVariablesInput.value);
+        const costosFijos = parseFloat(costosFijosInput.value);
+
+        if (isNaN(ingresos) || isNaN(costosVariables) || isNaN(costosFijos) || ingresos <= 0 || costosVariables <= 0 || costosFijos <= 0) {
+            resultadoDiv.textContent = 'Por favor, ingrese valores numéricos y positivos en todos los campos.';
+            if (chart) {
+                chart.destroy();
+            }
+            return;
+        }
+
+        const puntoEquilibrioUnidades = costosFijos / (ingresos - costosVariables);
+        const puntoEquilibrioMonetario = puntoEquilibrioUnidades * ingresos;
+        resultadoDiv.textContent = `El punto de equilibrio es de ${puntoEquilibrioUnidades.toFixed(2)} unidades (${puntoEquilibrioMonetario.toFixed(2)} en valor monetario).`;
+
+        const labels = ['Costos Fijos Totales', 'Costos Variables Por Unidad', 'Ingresos Por Unidad'];
+        const data = [costosFijos, costosVariables * puntoEquilibrioUnidades, ingresos * puntoEquilibrioUnidades];
+
+        if (chart) {
+            chart.destroy();
+        }
+
+        chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Punto de Equilibrio',
+                    data: data,
+                    backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe'],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    ingresosInput.addEventListener('input', actualizarResultado);
+    costosVariablesInput.addEventListener('input', actualizarResultado);
+    costosFijosInput.addEventListener('input', actualizarResultado);
+});
+

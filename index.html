@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>Calculadora de Punto de Equilibrio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <h1>Calculadora de Punto de Equilibrio</h1>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div class="max-w-xl mx-auto p-5">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold">Calculadora de Punto de Equilibrio</h1>
+        </div>
+        <form id="formularioPuntoEquilibrio" class="bg-white dark:bg-gray-800 p-6 rounded shadow-md">
+            <div class="mb-4">
+                <label for="ingresosUnidad" class="block text-gray-700 dark:text-gray-300">Ingresos por Unidad:</label>
+                <input type="number" name="ingresosUnidad" id="ingresos" placeholder="Ingrese ingresos por unidad" class="w-full p-2 border border-gray-300 rounded mt-1 text-black dark:text-white dark:bg-gray-700">
+            </div>
+            <div class="mb-4">
+                <label for="costosVariables" class="block text-gray-700 dark:text-gray-300">Costos Variables por Unidad:</label>
+                <input type="number" name="costosVariables" id="costosVariables" placeholder="Ingrese costos variables por unidad" class="w-full p-2 border border-gray-300 rounded mt-1 text-black dark:text-white dark:bg-gray-700">
+            </div>
+            <div class="mb-4">
+                <label for="costosFijos" class="block text-gray-700 dark:text-gray-300">Costos Fijos Totales:</label>
+                <input type="number" name="costosFijos" id="costosFijos" placeholder="Ingrese costos fijos totales" class="w-full p-2 border border-gray-300 rounded mt-1 text-black dark:text-white dark:bg-gray-700">
+            </div>
+        </form>
+        <div id="resultado" class="mt-6 text-gray-700 dark:text-gray-300"></div>
+        <canvas id="myChart" class="mt-6"></canvas>
+    </div>
+    <script src="script.js"></script>
+   
+    
+    <!---
     <div class="form-group">
         <label for="ingreso">Ingreso por unidad:</label>
         <input type="number" id="ingreso" placeholder="Ingrese el ingreso por unidad">
     </div>
-    <button onclick="calcular()">Calcular</button>
-    <div id="resultado"></div>
-    <canvas id="myChart"></canvas>
-    <script src="script.js"></script>
+    -->
 </body>
 </html>
